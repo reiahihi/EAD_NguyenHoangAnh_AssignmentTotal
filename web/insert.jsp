@@ -30,7 +30,7 @@
     Details: <input type="text" id="details" name="details"><br>
     Manufacturer:
     <select id="manufacturer" name="manufacturer">
-        <option id="0">Chọn hãng</option>
+        <option value="0">Chọn hãng</option>
 
         <c:forEach var="m" items="${listManu}">
             <option value="${m.manufacturerId}">${m.manufacturerName}</option>

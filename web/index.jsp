@@ -40,8 +40,7 @@
         <tr>
             <td>${e.productId}</td>
             <td>${e.productName}</td>
-                <%--<td><img src="resources/images/${e.productImage}" alt="${e.productImage}" height="80px"></td>--%>
-            <td>${e.productImage}</td>
+                <td><img src="resources/images/${e.productImage}" alt="${e.productImage}" height="80px"></td>
             <td>${e.productPrice}</td>
             <td>${e.productDetail}</td>
             <td>${e.manufacturersByManufacturerId.manufacturerName} </td>
@@ -54,8 +53,6 @@
 
     </tbody>
 </table>
-
 <h3><a href="CreateServlet">Create new product</a></h3>
-
 </body>
 </html>
