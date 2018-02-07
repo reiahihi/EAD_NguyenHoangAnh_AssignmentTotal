@@ -1,0 +1,37 @@
+package sb;
+
+import entities.Manufacturers;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import java.util.List;
+
+@Stateless(name = "ManufacturersSessionEJB")
+public class ManufacturersSessionBean extends AbstractFacade<Manufacturers>
+{
+    @PersistenceContext(unitName = "NewPersistenceUnit")
+    private EntityManager em;
+
+    @Override
+    public List<Manufacturers> findAll()
+    {
+        return super.findAll();
+    }
+
+    public ManufacturersSessionBean()
+    {
+    }
+
+    @Override
+    protected Class getClassName()
+    {
+        return Manufacturers.class;
+    }
+
+    @Override
+    protected EntityManager getEntityManager()
+    {
+        return em;
+    }
+}
